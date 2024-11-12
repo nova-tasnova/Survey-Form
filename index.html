@@ -1,83 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><h1 id="title">Survey form</h1></title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <div class="container">
-      <header class ="header">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
     <h1 id="title">Survey Form</h1>
-    <p id="description">Thank you for being with us to improve the platform </p>
-    </header>
-   
-    <form method="post" action='https://formspree.io/f/mblreeyp' id="survey-form">
-      <div class="form-group">
-      <label id="name-label" for="name">Name: </label>
-       <input id="name" name="name" type="text" class="formControl" placeholder="Enter your name" required>
-       </div>
-       <div class="form-group">
-      <label id="email-label" for="email">E-mail: </label>
-      <input id="email" name="email" type="email" class="formControl" placeholder="Enter your email" required>
-       </div>
-       <div class="form-group">
-       <label id="no-label" for="phone">Phone: </label>
-      <input id="phone" type="number" name="phone" class="formControl" placeholder="Enter your phone number" required>
+  </header>
+  <section>
+    <div class="container">
+      <div> 
+        <p id="description">Let us know how we can improve FreeCodeCamp</p>
+      </div>
+      <form action="https://formspree.io/f/mbljyyyo"  method="POST" id="survey-form">
+        <div class="row-tab">
+        <div class="label-tab">
+          <label id="name-label">Name</label>
         </div>
-        <div class="form-group">
-          <label id="number-label" for="number">Age: </label>
-         <input id="number" type="number" name="age" class="formControl" min="18" max="100" placeholder="Enter your age" required>
-           </div>
-        <div class="form-group">
-          <label id="address-label" for="address">Address<span class="clue">(optional):</span> </label>
-          <input id="address" type="text"name="address" class="formControl" placeholder="Enter your address" required>
-           </div>
-           <div class="form-group">
-            <p id="quest">Which option best describe your current role</p>
-      <select name="role" id="dropdown" class="formControl" required>
-        <option valur="" disabled selected>Select current role</option>
-        <option value="student">Student</option>
-        <option value="teacher">Teacher</option>
-        <option value="job">Job</option>
-        <option value="others">Others</option>
-        </select>
+        <div class="input-tab">
+          <input type="text"  id="name" name="Name" required placeholder="Enter your name">
         </div>
-        <div class="form-group">
-          <p id="quest">How you come to know us?</p>
-          <label for ="">
-        <input  name="options" value="option1" type="radio" class="inputRadio" checked>Friends</label>
-        <label for="">
-          <input  name="options" value="option2" type="radio" class="inputRadio" >Youtube</label>
-          <label for ="">
-            <input  name="options" value="option3" type="radio" class="inputRadio" >Facebook</label>
-            <label for ="">
-              <input  name="options" value="option4" type="radio" class="inputRadio">Others</label>
-              </div>
-              <div class="form-group">
-                <p id="quest">Would you like to see improved</p>
-                 <label for="">  
-                 <input type="checkbox"value="checkbox1" class="checkbox"name="prefer">Back-end developer</label>
-                 <label for="">
-                 <input type="checkbox" value="checkbox2" class="checkbox" name="prefer">Front-end developer</label>
-                 <label for="">
-                  <input type="checkbox" value="checkbox3" class="checkbox" name="prefer">Android developer</label>
-                  <label for="">
-                    <input type="checkbox" value="checkbox4" class="checkbox" name="prefer">Software Engineering</label>
-                    <label for="">
-                      <input type="checkbox" value="checkbox5" class="checkbox" name="prefer">Other</label>
-                      </div> 
-                      <div class="form-group">
-                        <p id="quest">Give us your feedback</p>  
-                        <textarea name="feedback" id="feedback" cols="30" rows="5" class="textarea" placeholder="I like most...."></textarea>
-                      </div>  
-                      <div class="form-group">                                          
-                          <button id="submit" type="submit" class="btn">Submit</button>
-                          </div>
-                          
-                          
-    </form>
-   </div> 
-    </body>
-    </html>
+      </div>
+      <div class="row-tab">
+        <div class="label-tab">
+          <label id="email-label">Email</label>
+        </div>
+        <div class="input-tab">
+          <input type="email" name="Email" required id="email" placeholder="Enter your e-mail">
+        </div>
+      </div>
+      <div class="row-tab">
+        <div class="label-tab">
+          <label id="number-label">Age</label>
+        </div>
+        <div class="input-tab">
+          <input type="number" name="Age"  placeholder="Enter your age" max="100" min="15" id="number" required>
+        </div>
+      </div>
+      <div class="row-tab">
+        <div class="label-tab">
+          <label>Which  option best describes your current role?</label>
+        </div>
+        <div class="select-tab">
+          <select id="dropdown">
+            <option>Student</option>
+            <option>Job holder</option>
+            <option>Businessman</option>
+          </select>
+        </div>
+      </div>
+      <div class="row-tab">
+        <div class="label-tab">
+          <label>How likely is that you would recommend freecodecamp to a friend?</label>
+        </div>
+        <div class="input-tab">
+        <div>  <input type="radio" name="suggest" value="Definitely"><label>Definitely</label></div>
+         <div><input type="radio" name="suggest" value="Maybe"><label>Maybe</label></div>
+        <div><input type="radio" name="suggest" value="Not Sure"><label>Not Sure</label></div>
+        </div>
+      </div>
+      <div class="row-tab">
+        <div class="label-tab">
+          <label>What do you like most in FreeCodeCamp</label>
+        </div>
+        <div class="select-tab">
+          <select id="dropdown">
+            <option>Select an option</option>
+            <option>Html/Css</option>
+            <option>Javascript</option>
+          </select>
+        </div>
+      </div>
+      <div class="row-tab">
+        <div class="label-tab">
+          <label>Things that should be improved in the future (Check all that apply)</label>
+        </div>
+        <div class="input-tab">
+         <div> <input  type="checkbox"value="Front-end Project" name="project" ><label>Front-end Project</label></div>
+          <div><input  type="checkbox"value="Back-end Project" name="project"><label>Back-end Project</label></div>
+          <div><input type="checkbox"value="Data Visualization" name="project"><label>Data Visualization</label></div>
+        </div>
+      </div>
+      <div class="row-tab">
+        <div class="label-tab">
+            <label for="feedback">Give us your feedback</label>
+        </div>
+        <div class="input-tab">
+            <textarea name="feedback" id="feedback" placeholder="I like most...."></textarea>
+        </div>
+    </div>
+      <div class="form-group">                                          
+        <button id="submit" type="submit" class="btn">Submit</button>
+        </div>
+        
+        
+      </form>
+    </div>
+  </section>
+</body>
+</html>
